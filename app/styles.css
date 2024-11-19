@@ -1,0 +1,542 @@
+:root {
+  --bg-image: url("../assets/background.jpg");
+  --primary-color: #191936;
+  --secondary-color: #99ffff;
+  --color1: #081c3d;
+  --color2: #2d2d56;
+  --color-lg: linear-gradient(45deg, #0a2a60, #000d3f);
+  --color-lg2: linear-gradient(to top, #0a4cf9, #027f9f);
+  --color-card: radial-gradient(#0a0b39, #000121);
+  --color-card2: radial-gradient(#274764, #197799);
+  --color-rg: radial-gradient(#ddf, #fff);
+  --text-color: white;
+}
+
+/* Keyframes untuk animasi fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: scale(2) translateY(160px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.slideUp {
+  opacity: 0;
+  animation: slideUp 2.5s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.slideDown {
+  opacity: 0;
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+* {
+  margin: 0;
+      padding: 0;
+}
+
+body {
+  overflow-X: hidden;
+  margin: 0;
+  padding: 0;
+  /* background-image: var(--bg-image); */ 
+  /* Udah edit aja di settings, biar lebih fleksibel dan bsa pke link cdn langsung tanpa mengubah css, gitu broh */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-wrap;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+  font-family: "Roboto", Sans-Serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 800px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0, 0, .5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header {
+  margin: 0;
+  padding: 8px 15px;
+  max-width: 100%;
+  width: 100%;
+  position: sticky;
+  z-index: 10;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#header .url-saat-ini {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#copy-btn:hover {
+  cursor: pointer;
+}
+
+#copy-btn:active {
+  transform: scale(0.8);
+}
+
+.blink-animation {
+  color: blue;
+  transition: transform 0.5s ease;
+}
+
+#profile-bio {
+  margin-top: 70px;
+  max-width: 80%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+@keyframes ppAnimasi {
+  0% {
+    transform: translateY(0) rotate(-360deg) scale(1, 1);
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(-50px) rotate(0) scale(0.5, 0.7);
+    opacity: 0.5;
+  }
+  70% {
+    transform: translateY(0) rotate(0) scale(1, 0.7);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0) scale(1, 1);
+    opacity: 1;
+  }
+}
+
+#profile-picture {
+  margin-bottom: 22px;
+  width: 35%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+.animate {
+  animation: ppAnimasi 3s ease 2s;
+}
+
+#profile-name {
+  color: var(--secondary-color);
+  font-family: "Poppins", Sans-Serif;
+}
+
+.profile-desc {
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
+.border-btm {
+  margin-top: 20px;
+  width: 70%;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.container-link {
+  /*background-color: #ddd;*/
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-link {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.link-sosmed {
+  padding: 10px 10px;
+  width: 85%;
+  max-width: 500px;
+  height: 50px;
+  background-image: var(--color-card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid var(--secondary-color);
+  border-radius: 15px;
+  font-family: "poppins", Sans-Serif;
+  font-weight: 500;
+  color: var(--secondary-color);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  opacity: 0;
+}
+.link-sosmed a {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.link-sosmed .fa-brands {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+.link-sosmed .fa-diamond {
+  font-size: 0.2em;
+}
+.link-sosmed:hover {
+  border: none;
+  transform: scale(1.03);
+  background-image: var(--color-rg);
+  box-shadow: 0px 2.5px 0px rgba(0, 3, 5, 1);
+  color: var(--primary-color);
+}
+.link-sosmed:active {
+  box-shadow: none;
+  transform: scale(1) translateY(2px);
+}
+.link-sosmed:hover > a {
+  font-weight: 700;
+  color: var(--color1);
+}
+.link-sosmed:hover > .fa-brands {
+  font-weight: 700;
+  color: var(--color1);
+}
+
+.link-gc {
+  padding-left: 6px;
+  padding-right: 12px;
+  width: 85%;
+  max-width: 500px;
+  height: 50px;
+  background-image: var(--color-card2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: "poppins", Sans-Serif;
+  font-weight: 500;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  opacity: 0;
+}
+.link-gc a {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.link-gc img {
+  width: 40px;
+  height: auto;
+  border-radius: 5px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.link-gc .fa-diamond {
+  font-size: 0.2em;
+}
+.link-gc:hover {
+  transform: scaleX(1.03);
+  box-shadow: 3px 5px 3px rgba(0, 3, 5, 0.8);
+}
+.link-gc:active {
+  background-image: var(--color-rg);
+  color: var(--primary-color);
+  box-shadow: none;
+  transform: translateY(3px) translateX(7px);
+}
+.link-gc:active a {
+  color: var(--color1);
+}
+
+.link-oth {
+  padding-left: 6px;
+  padding-right: 12px;
+  width: 85%;
+  max-width: 500px;
+  height: 50px;
+  background-image: var(--color-rg);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0px 2.5px 0px rgb(25, 111, 153);
+  font-family: "poppins", Sans-Serif;
+  font-weight: 500;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  opacity: 0;
+}
+.link-oth a {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color1);
+  font-weight: 700;
+}
+.link-oth img {
+  width: 35px;
+  height: auto;
+  border-radius: 5px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  filter: invert(100%);
+}
+.link-oth .fa-diamond {
+  font-size: 0.2em;
+}
+.link-oth:hover {
+  background-color: var(--color2);
+  background-image: none;
+  color: var(--text-color);
+}
+.link-oth:hover a {
+  color: var(--secondary-color);
+}
+.link-oth:hover img {
+  filter: invert(0%);
+}
+.link-oth:active {
+  box-shadow: none;
+  transform: translateY(3px);
+  border: 1.5px solid rgb(25, 111, 153);
+}
+
+.footer {
+  padding: 8px 0px;
+  margin-top: 0px;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #bbb;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+}
+
+.popupPP {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease, opacity 1s ease;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.popupPP.show {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-content {
+  padding: 10px;
+  width: 80%;
+  height: auto;
+  max-width: 550px;
+  max-height: 50vh;
+  overflow-y: hidden;
+  background: var(--color2);
+  color: var(--text-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.popup-pp {
+  margin: 20px 0px;
+  width: 30%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+.popup-name {
+  font-family: "Poppins", Sans-Serif;
+  font-size: 22px;
+  color: var(--secondary-color);
+}
+
+.popup-content .popup-title {
+  margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+
+.popup-content p {
+  max-width: 85%;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.popup-content .link-wrap {
+  margin-top: 15px;
+  padding: 10px 35px;
+}
+
+.link-wrap .popup-link {
+  margin: 0px 5px;
+  
+  font-size: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.popup-btn {
+  margin: 22px;
+  padding: 5px 12px;
+  background-image: var(--color-lg2);
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Poppins", Sans-Serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.popup-btn:hover {
+  transform: scale(1.2);
+}
+.popup-btn:active {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  border: 2px solid blue;
+  color: blue;
+  transform: scale(1);
+  font-weight: 700;
+}
+
+/*Bre ini untuk responsivitas di berbagai device (^600px)*/
+@media (min-width: 600px) {
+  #container {
+    width: 70%;
+  }
+  #profile-bio {
+    margin-top: 200px;
+  }
+  #profile-picture {
+    width: 25%;
+  }
+  #profile-name {
+    font-size: 2em;
+  }
+  .profile-desc {
+    font-size: 1rem;
+    width: 70%;
+  }
+  
+  .popup-content {
+    padding: 30px 0px;
+  }
+  .popup-content .popup-title {
+    font-size: 35px;
+  }
+  .popup-content p {
+    font-size: 17px;
+    max-width: 75%;
+  }
+  .popup-content .name,.close-btn {
+    font-size: 32px;
+  }
+  .link-wrap .popup-link {
+    margin: 0px 8px;
+    font-size: 22px;
+    
+  }
+  
+}
+
