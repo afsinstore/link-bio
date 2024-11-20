@@ -4,7 +4,7 @@ This repository contains a simple project often referred to as "Link Bio" or sim
 
 ### Demo  
 Live demo? here!:  
-[**https://contacts.afsin.store**](https://contacts.afsin.store)
+[**https://contacts.afsin.store**](https://contacts.afsin.store)  
 Pages generated from this repository
 [**https://afsinstore.github.io/link-bio**](https://afsinstore.github.io/link-bio)
 
