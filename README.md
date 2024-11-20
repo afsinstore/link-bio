@@ -4,14 +4,16 @@ This repository contains a simple project often referred to as "Link Bio" or sim
 
 ### Demo  
 Live demo? here!:  
-[**Link Bio Demo**](https://contacts.afsin.store)  
+[**https://contacts.afsin.store**](https://contacts.afsin.store)
+Pages generated from this repository
+[**https://afsinstore.github.io/link-bio**](https://afsinstore.github.io/link-bio)
 
 ### Contact Developer  
 Feel free to reach out if you have feedback, suggestions, or want to share knowledge about web development or other programming topics:  
 - [WhatsApp](https://wa.me/6283873123398)  
 - [Telegram](https://t.me/afsin_store)  
 
-### Tentang  
+### About  
 Saya sadar project ini mungkin jauh dari sempurna, tapi ini adalah hasil dari proses belajar saya. Kalau ada kritik, saran, atau ide yang bisa membantu saya berkembang, saya akan sangat menghargainya.  
 
 Jangan ragu untuk meninggalkan komentar atau review di repository ini, ya. Siapa tahu masukan kecil dari kamu bisa bikin project ini lebih baik lagi!  
