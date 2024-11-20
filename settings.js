@@ -1,12 +1,12 @@
-const logo = "/assets/logo.jpg";
-const ikon = "/assets/ikon.svg";
+const logo = "assets/logo.jpg";
+const ikon = "assets/ikon.svg";
 
 let settings = {
     profileBio: {
         nama: "AFSIN STORE",
         // ppImg: ikon,
         // ppImg: logo,
-        ppImg: "/assets/profile-picture.jpg",
+        ppImg: "assets/profile-picture.jpg",
         // pp bebas mau pake mana, asal ganti di assets
         bgImg: "./assets/background.jpg",
         bio: `Afsin Store, adalah penyedia jasa dan berbagai produk digital. Di bawah ini adalah kontak resmi dan sosmed Afsin Store.`
