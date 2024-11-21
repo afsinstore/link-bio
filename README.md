@@ -9,7 +9,7 @@ Pages generated from this repository
 [**https://afsinstore.github.io/link-bio**](https://afsinstore.github.io/link-bio)
 
 ### Contact Developer  
-Feel free to reach out if you have feedback, suggestions, or want to share knowledge about web development or other programming topics:  
+If you have any feedback, suggestions, or other discussions, please feel free to contact us below.
 - [WhatsApp](https://wa.me/6283873123398)  
 - [Telegram](https://t.me/afsin_store)  
 
